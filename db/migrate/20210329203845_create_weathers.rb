@@ -3,6 +3,7 @@ class CreateWeathers < ActiveRecord::Migration[6.1]
     create_table :weathers do |t|
       t.string :description
       t.integer :temperature
+      t.references :location
 
       t.timestamps
     end

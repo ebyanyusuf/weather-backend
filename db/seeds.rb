@@ -8,6 +8,7 @@
 User.destroy_all
 Location.destroy_all
 Activity.destroy_all
+Weather.destroy_all
 
 
 jacob = User.create(username: "jacob")
@@ -16,5 +17,16 @@ eby = User.create(username: "ebyan")
 burke = Location.create(zip: 22015, city: "Burke", user_id: eby.id)
 elpaso = Location.create(zip: 79924, city: "El Paso", user_id: jacob.id)
 
-rollerskating = Activity.create(name: "Roller Skating", user_id: eby.id)
+
+sunday = Weather.create(description: "Sunny", temperature: 70, location_id: burke.id)
+monday = Weather.create(description: "Cloudy", temperature: 60, location_id: burke.id)
+tuesday = Weather.create(description: "Rain", temperature: 68, location_id: burke.id)
+wednesday = Weather.create(description: "Sunny", temperature: 70, location_id: burke.id)
+thursday = Weather.create(description: "Sunny", temperature: 70, location_id: burke.id)
+friday = Weather.create(description: "Snow", temperature: 30, location_id: burke.id)
+saturday = Weather.create(description: "Sunny", temperature: 70, location_id: burke.id)
+
+
+rollerskating = Activity.create(name: "Roller Skating", user_id: eby.id, location_id: burke.id)
+
 
